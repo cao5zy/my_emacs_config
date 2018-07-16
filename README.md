@@ -28,6 +28,10 @@ Open emacs, you may see error messages because `zenburn` and `winum` haven't bee
 Input command `M-x package-install RETURN zenburn` and `M-x package-install RETURN winum`   
 Restart emacs, it will launch without error message.  
 
+---
+If you fail to install package from emacs `M-x package-install`, you can try to install `zenburn` and `winum` from the source.    
+[zenburn installation](https://github.com/bbatsov/zenburn-emacs)   
+If you encounter problems to download the `el` file, you can clone the repository to your local.   
 
 
 
