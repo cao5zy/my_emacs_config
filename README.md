@@ -37,8 +37,12 @@ cd ~/
 git clone https://github.com/bbatsov/zenburn-emacs.git
 mkdir ~/.emacs.d/themes/ -p
 cp ./zenburn-emacs/zenburn-theme.el ./.emacs.d/themes
-echo (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") >> .emacs
-echo (load-theme 'zenburn t) >> .emacs
+
+```
+Add the following code to `~/.emacs`.
+```
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'zenburn t)
 ```
 
 
