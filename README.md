@@ -36,7 +36,7 @@ If you encounter problems to download the `el` file, you can clone the repositor
 cd ~/
 git clone https://github.com/bbatsov/zenburn-emacs.git
 mkdir ~/.emacs.d/themes/ -p
-cp ./zenburn-emacs/zenburn-emacs.el ./.emacs.d/themes
+cp ./zenburn-emacs/zenburn-theme.el ./.emacs.d/themes
 echo (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") >> .emacs
 echo (load-theme 'zenburn t) >> .emacs
 ```
