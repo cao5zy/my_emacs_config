@@ -32,6 +32,13 @@ Restart emacs, it will launch without error message.
 If you fail to install package from emacs `M-x package-install`, you can try to install `zenburn` and `winum` from the source.    
 [zenburn installation](https://github.com/bbatsov/zenburn-emacs)   
 If you encounter problems to download the `el` file, you can clone the repository to your local.   
-
+```
+cd ~/
+git clone https://github.com/bbatsov/zenburn-emacs.git
+mkdir ~/.emacs.d/themes/ -p
+cp ./zenburn-emacs/zenburn-emacs.el ./.emacs.d/themes
+echo (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/") >> .emacs
+echo (load-theme 'zenburn t) >> .emacs
+```
 
 
