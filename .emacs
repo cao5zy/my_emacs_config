@@ -19,7 +19,21 @@
 		(lambda () (interactive) (previous-line 5)))
 
 
-;; copy or delete a line without selection
+;; load zenbur them
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
+(load-theme 'zenburn t)
+
+;; show line number
+(global-linum-mode 1) ; always show line numbers
+
+
+;; add short key to shell
+(global-set-key (kbd "<f9>") 'shell)
+(global-set-key (kbd "<f10>") 'rename-buffer)
+(global-set-key (kbd "<f8>") 'enlarge-window)
+
+;; copy or cut one line with M - w or C - w
 (defadvice kill-ring-save (before slickcopy activate compile)
   (interactive
    (if mark-active (list (region-beginning) (region-end))
@@ -29,31 +43,4 @@
   (interactive
    (if mark-active (list (region-beginning) (region-end))
      (list (line-beginning-position)
-	   (line-beginning-position 2)))))
-
-;; load zenbur them
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-
-(load-theme 'zenburn t)
-
-;; show line number
-(global-linum-mode 1) ; always show line numbers
-
-;;load the winum
-(require 'winum)
-(winum-mode)
-
-;; set proxy
-(setq url-proxy-services '(("https" . "web-proxy.atl.hp.com:8080")))
-
-;; add short key to shell
-(global-set-key (kbd "<f9>") 'shell)
-(global-set-key (kbd "<f10>") 'rename-buffer)
-(global-set-key (kbd "<f8>") 'enlarge-window)
-(global-set-key (kbd "≈") 'M-x)
-
-;; turn on highlighting current line
-(global-hl-line-mode 1)
-(put 'scroll-left 'disabled nil)
-
-(put 'downcase-region 'disabled nil)
+	              (line-beginning-position 2)))))
